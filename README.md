@@ -14,6 +14,10 @@ To DO
 <div align="center">
   
 <!-- <img screenshot of page/> -->
+
+
+<img src="https://github.com/TomJS14/cv-generator/assets/133436558/a1c736a8-6e30-48aa-a2bf-edadb7dc8d1f" alt="cv-generator" width="50%" style="border-radius: 10px" />
+
   
 </div>
 
@@ -35,4 +39,4 @@ This is my first React project, using state management to update a CV preview.
 - To refactor and move more logic into components
 - To update with form validation
 
-Graphics from - [PLACEHOLDER]
+
