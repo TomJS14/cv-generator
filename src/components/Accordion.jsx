@@ -1,6 +1,8 @@
 /** @format */
 
 import { useState } from "react";
+import chevronUp from "../assets/chevronUp.svg";
+import chevronDown from "../assets/chevronDown.svg";
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
@@ -11,9 +13,9 @@ const Accordion = ({ title, content }) => {
         <div>{title}</div>
         <div>
           {isActive ? (
-            <img className="chevron" src="./src/assets/chevronUp.svg"></img>
+            <img className="chevron" src={chevronUp}></img>
           ) : (
-            <img className="chevron" src="./src/assets/chevronDown.svg"></img>
+            <img className="chevron" src={chevronDown}></img>
           )}
         </div>
       </div>
