@@ -39,4 +39,4 @@ This is my first React project, using state management to update a CV preview.
 - To refactor and move more logic into components
 - To update with form validation
 
-Graphics from - [PLACEHOLDER]
+
