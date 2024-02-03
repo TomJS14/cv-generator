@@ -1,9 +1,12 @@
+/** @format */
+
 import { useState } from "react";
 import GeneralInfo from "./components/GeneralInfo";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Hobbies from "./components/Hobbies";
 import Education from "./components/Education";
+import ImageUpload from "./components/ImageUpload";
 import "./styles/App.css";
 import Accordion from "./components/Accordion";
 import initialData from "./utils/data";
@@ -52,7 +55,7 @@ function App() {
                         setData((prevData) => ({
                           ...prevData,
                           experience: prevData.experience.filter(
-                            (_, i) => i !== index,
+                            (_, i) => i !== index
                           ),
                         }))
                       }
@@ -114,7 +117,7 @@ function App() {
                         setData((prevData) => ({
                           ...prevData,
                           education: prevData.education.filter(
-                            (_, i) => i !== index,
+                            (_, i) => i !== index
                           ),
                         }))
                       }
@@ -148,7 +151,7 @@ function App() {
                         setData((prevData) => ({
                           ...prevData,
                           hobbies: prevData.hobbies.filter(
-                            (_, i) => i !== index,
+                            (_, i) => i !== index
                           ),
                         }))
                       }
@@ -161,11 +164,17 @@ function App() {
             </>
           }
         ></Accordion>
+        <button className="clearBtn" onClick={handleClearAll}>
+          Clear All
+        </button>{" "}
       </div>
       {/* Preview sections */}
       <div className="preview">
         <div className="personalInfoGroup">
           <ul className="personalInfoList">
+            <li className="photo">
+              <ImageUpload />
+            </li>
             <li>
               <h2 className="nameHeader">{data.name}</h2>
             </li>
@@ -226,9 +235,6 @@ function App() {
           ))}
         </div>
       </div>
-      <button className="clearBtn" onClick={handleClearAll}>
-        Clear All
-      </button>{" "}
     </div>
   );
 }

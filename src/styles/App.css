@@ -1,3 +1,5 @@
+/** @format */
+
 * {
   box-sizing: border-box;
   --main-bg-color: #395c6b;
@@ -10,27 +12,31 @@
 
 #root {
   /* max-width: 1280px; */
-  max-width: 90vw;
+  max-width: 95vw;
   min-height: 90vh;
   margin: 0 auto;
   text-align: center;
 }
 
 .app {
-  display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
-  min-width: 90vw;
+  display: flex;
+  padding-top: 10px;
+  position: relative;
 }
 
 /* FORM ENTRY SECTION - LEFT */
 
 .formGroupsContainer {
   display: flex;
+  word-wrap: break-word;
   flex-direction: column;
   gap: 0.3rem;
-  padding-right: 10px;
+  padding: 0 8px;
+  padding-left: 0;
   border-radius: 10px;
   position: relative;
+  min-width: 30%;
+  max-width: 30%;
 }
 
 .formGroupsContainer::after {
@@ -116,8 +122,9 @@ textarea {
 .preview {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
   gap: 5px;
-  margin-left: 10px;
+  margin: 0 10px;
   background-color: #f1f2ee;
   color: var(--preview-text-color);
   border-radius: 10px;
@@ -133,18 +140,14 @@ textarea {
   position: relative;
 }
 
-.skillsHeader {
-  color: var(--header-color);
+.photo {
+  max-height: 100px;
+  padding: 0;
+  margin: 0;
 }
 
-.personalInfoList::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  right: 0;
-  width: 5px;
-  height: 100%;
-  background-color: #3e6259;
+.skillsHeader {
+  color: var(--header-color);
 }
 
 .personalInfoGroup {
@@ -157,19 +160,31 @@ textarea {
   align-items: start;
   list-style: none;
   color: white;
-
   border-radius: 10px 10px 0px 0px;
 }
 
 .personalInfoList {
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: start;
   list-style: none;
   padding-left: 5px;
   word-wrap: break-word;
-  width: 60%;
+  overflow-wrap: break-word; /* Add overflow-wrap property */
   position: relative;
+  width: 100%;
+  max-width: 100%; /* Add max-width property */
+}
+
+.personalInfoList::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #3e6259;
 }
 
 .skillsContainer {
@@ -179,7 +194,7 @@ textarea {
 .skillsGroup {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  max-width: 90%;
+  width: 100%;
   padding-left: 5px;
   gap: 10px;
   align-items: center;
@@ -219,6 +234,7 @@ textarea {
   gap: 10px;
   align-items: start;
   padding-bottom: 10px;
+  width: 100%;
 }
 
 .hobbiesGroup {
@@ -229,6 +245,7 @@ textarea {
   align-items: center;
   justify-content: start;
   word-wrap: break-word;
+  width: 100%;
 }
 
 .experiences {
@@ -266,4 +283,74 @@ button:hover {
 
 .add:hover {
   background-color: rgb(27, 130, 27);
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: var(--button-color);
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+@media only screen and (max-width: 630px) {
+  * {
+    font-size: 0.9rem;
+  }
+
+  .app {
+    flex-direction: column;
+    width: 100vw;
+    padding: 10px;
+    overflow-x: hidden;
+    gap: 10px;
+  }
+
+  .formGroupsContainer,
+  .preview {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 90%;
+    padding: 1px;
+  }
+
+  .skillsContainer {
+    padding-left: 10px;
+  }
+
+  .skillsGroup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personalInfoList,
+  .skillsGroup,
+  .experienceGroup,
+  .educationGroup,
+  .hobbiesGroup {
+    width: 100%;
+    display: flex;
+  }
+
+  .formGroupsContainer::after {
+    content: none;
+  }
+
+  .custom-file-upload {
+    width: 50%;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 631px) {
+  .app {
+  }
 }

@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 
 function Skills({ skills, setSkills }) {
@@ -9,7 +11,7 @@ function Skills({ skills, setSkills }) {
       setNewSkillName("");
     }
     if (skills.length >= 10) {
-      alert("Max of 10 skills, you little show off, you");
+      alert("Max of 10 skills, you little show off");
     }
   }
 

@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 
 function Experience({ experience, setExperience }) {
@@ -27,7 +29,7 @@ function Experience({ experience, setExperience }) {
     }
 
     if (experience.length >= 5) {
-      alert("Let's keep it to a max of 5 Jobs for a snappier CV");
+      alert("Let's keep it to a max of 5 Jobs");
     }
   }
 

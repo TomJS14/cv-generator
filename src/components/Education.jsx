@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 
 function Education({ education, setEducation }) {
@@ -24,7 +26,7 @@ function Education({ education, setEducation }) {
     }
 
     if (education.length >= 5) {
-      alert("Let's keep it to a max of 5 schools for a snappier CV");
+      alert("Let's keep it to a max of 5 schools");
     }
   }
 
