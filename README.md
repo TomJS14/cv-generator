@@ -15,7 +15,6 @@ To DO
   
 <!-- <img screenshot of page/> -->
 
-cv-generator-img.png
 
 <img src="https://github.com/TomJS14/cv-generator/assets/133436558/a1c736a8-6e30-48aa-a2bf-edadb7dc8d1f" alt="cv-generator" width="50%" style="border-radius: 10px" />
 
