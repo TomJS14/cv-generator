@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  --main-bg-color: #395c6b;
+  --header-color: white; /* #3e6259; */
+  --banner-color: #294936;
+  --preview-text-color: #212922;
+  --button-color: #5b8266;
+  --button-color-secondary: #ff6f59;
+}
+
+#root {
+  /* max-width: 1280px; */
+  max-width: 90vw;
+  min-height: 90vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 0.3fr 0.7fr;
+  min-width: 90vw;
+}
+
+/* FORM ENTRY SECTION - LEFT */
+
+.formGroupsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-right: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.formGroupsContainer::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 0;
+  width: 5px;
+  height: 50%;
+  background-color: var(--preview-text-color);
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  padding: 5px;
+  margin: 5px 0;
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(244, 243, 243);
+  border-radius: 10px;
+  width: 100%;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.skillContainer,
+.hobbyContainer,
+.experienceContainer,
+.educationContainer {
+  display: flex;
+  flex: 0.5 1 auto;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.experienceFormContainer,
+.skillsFormContainer,
+.hobbiesFormContainer,
+.generalInfoFormContainer,
+.educationFormContainer {
+  display: flex;
+  gap: 1rem;
+  margin: 0 5px;
+  justify-content: space-between;
+}
+
+.experienceForm,
+.skillsForm,
+.hobbiesForm,
+.generalInfoForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.accordion-item {
+  border-radius: 5px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.accordion-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chevron {
+  width: 3rem;
+}
+
+.chevron:hover {
+  transform: scale(1.2);
+}
+
+/* CV PREVIEW SECTION - RIGHT*/
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 10px;
+  background-color: #f1f2ee;
+  color: var(--preview-text-color);
+  border-radius: 10px;
+}
+
+.nameHeader {
+  color: var(--header-color);
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-right: 10px;
+  word-wrap: break-word;
+  max-width: 100%;
+  position: relative;
+}
+
+.skillsHeader {
+  color: var(--header-color);
+}
+
+.personalInfoList::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #3e6259;
+}
+
+.personalInfoGroup {
+  background-color: var(--banner-color);
+  outline: 1px solid grey;
+  box-shadow: 0 0 10px 1px #848c8e;
+  display: flex;
+  padding-right: 5px;
+  justify-content: center;
+  align-items: start;
+  list-style: none;
+  color: white;
+
+  border-radius: 10px 10px 0px 0px;
+}
+
+.personalInfoList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style: none;
+  padding-left: 5px;
+  word-wrap: break-word;
+  width: 60%;
+  position: relative;
+}
+
+.skillsContainer {
+  width: 50%;
+}
+
+.skillsGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 90%;
+  padding-left: 5px;
+  gap: 10px;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.skill,
+.experience,
+.hobby,
+.education {
+  background-color: var(--button-color);
+  color: white;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 3px;
+  margin-right: 5px;
+}
+
+.skillsEntry,
+.experienceEntry,
+.hobbiesEntry,
+.educationEntry {
+  margin-right: 10px;
+  padding-left: 5px;
+}
+
+.sectionTitle {
+  color: #435058;
+  font-size: 1.5rem;
+}
+
+.experienceGroup,
+.educationGroup {
+  display: flex;
+  padding-left: 5px;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  padding-bottom: 10px;
+}
+
+.hobbiesGroup {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  word-wrap: break-word;
+}
+
+.experiences {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+/* Buttons */
+
+button {
+  background: var(--button-color);
+  border-radius: 10px;
+  box-shadow: #f3f3f3 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  max-height: 30px;
+  margin-bottom: auto;
+  font-size: 1rem;
+  padding: 2px 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border: 0;
+}
+button:hover {
+  background-color: var(--button-color-secondary);
+}
+
+.add:hover {
+  background-color: rgb(27, 130, 27);
+}
