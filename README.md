@@ -14,6 +14,10 @@ To DO
 <div align="center">
   
 <!-- <img screenshot of page/> -->
+
+cv-generator-img.png
+
+<img src="https://github.com/TomJS14/cv-generator/cv-generator-img.png" alt="cv-generator" width="50%" style="border-radius: 10px" />
   
 </div>
 
