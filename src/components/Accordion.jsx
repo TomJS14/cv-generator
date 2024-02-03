@@ -1,3 +1,5 @@
+/** @format */
+
 import { useState } from "react";
 
 const Accordion = ({ title, content }) => {
@@ -9,9 +11,9 @@ const Accordion = ({ title, content }) => {
         <div>{title}</div>
         <div>
           {isActive ? (
-            <img className="chevron" src="src/assets/chevronUp.svg"></img>
+            <img className="chevron" src="./src/assets/chevronUp.svg"></img>
           ) : (
-            <img className="chevron" src="src/assets/chevronDown.svg"></img>
+            <img className="chevron" src="./src/assets/chevronDown.svg"></img>
           )}
         </div>
       </div>
